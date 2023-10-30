@@ -6,7 +6,10 @@ this.name=name;
 pentla1(start1,end2,colie3){
     console.log(this.name);
     for(let x=start1;x<=end2;x+=colie3){
-        console.log(x);
+        show(x);
+    }
+    function show(txt){
+    console.log(txt+".");
     }
 }
 }
