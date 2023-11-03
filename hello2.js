@@ -13,3 +13,13 @@ class hello1 {
 }
 var hello3 = new hello1("!nazwa!");
 hello3.hello2(0, 10, 1);
+
+var osoba = {
+  name: "Hello",
+  age: 30,
+  height: 180,
+  showALL: function () {
+    return this.name + " " + this.age + " " + this.height;
+  },
+};
+console.log(osoba.showALL());
