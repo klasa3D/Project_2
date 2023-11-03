@@ -7,8 +7,22 @@
     <title>Klasy</title>
 
     <script>
+        
+const osoba = {
+    name: "Adam",
+    age: 30,
+    height: 180,
+    showAll: function(){
+        return this.name + " " + 
+        this.age + " " +
+        this.height;
+    }
+    
+}
+
+document.write(osoba.showAll());
         class Test1 {
-            constructa(name) {
+            construct(name) {
                 this.name = name;
             }
             petla(start1, end2, coile) {
