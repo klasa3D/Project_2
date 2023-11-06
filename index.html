@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EXTENDS</title>
     <script src="script.js"></script>
 </head>
+
 <body>
-    
+    <script>
+        // const osoba = {
+        //     imie: "Adam",
+        //     wiek: "30",
+        //     wzrost: "180",
+        //     wszystko: function() {
+        //         return this.imie + " " + this.wiek + " " + this.wzrost;
+        //     }
+        // }
+        // document.write(osoba.wszystko)
+        class Klient {
+            // imie: "Adam";
+            // nazwisko: "Kowalski";
+            // wiek: "18";
+
+            constructor(imie, nazwisko, wiek) {
+                this.imie = imie,
+                this.nazwisko = nazwisko,
+                this.wiek = wiek
+            }
+
+            powitanie() {
+                document.write(` działa!! <br>, ${this.imie} ${this.nazwisko}`);
+            }
+            czyPelnoletni() {
+                if (this.wiek >= 18) return true;
+                else return false;
+            }
+        }
+        class Dane_klienta extends Klient { }
+        let Nowak = new Dane_klienta("Tadeusz", "Nowak", 44);
+        let Kowalski = new Dane_klienta("Kacper", "Kowalski", 17);
+        document.write(Nowak.czyPelnoletni());
+        Kowalski.powitanie();
+    </script>
 </body>
+
 </html>
